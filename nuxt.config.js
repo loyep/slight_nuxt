@@ -9,6 +9,20 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'server',
+  loading: false,
+  loadingindicator: false,
+  /**
+   * 定义公共的配置
+   */
+  globalName: 'app',
+  globals: {
+    id: (globalName) => `${globalName}`,
+    nuxt: (globalName) => `$${globalName}`,
+    context: (globalName) => `__${globalName.toUpperCase()}__`,
+    pluginPrefix: (globalName) => globalName,
+    // readyCallback: globalName => `on${_.capitalize(globalName)}Ready`,
+    // loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -34,7 +48,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '@/plugins/index.js', ssr: true }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -53,12 +67,8 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    // 'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
   ],
   /*
    ** Axios module configuration
@@ -66,13 +76,11 @@ export default {
    */
   axios: {},
   /*
-   ** Content module configuration
-   ** See https://content.nuxtjs.org/configuration
-   */
-  content: {},
-  /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  render: {
+    compressor: false,
+  },
 }

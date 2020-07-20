@@ -28,12 +28,23 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent, onUnmounted, onMounted } from '@vue/composition-api'
 
-export default Vue.extend({})
+export default defineComponent({
+  setup() {
+    onMounted(function () {
+      console.log('ggggg')
+    })
+
+    onUnmounted(() => {
+      console.log('ffff')
+    })
+    return {}
+  },
+})
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
