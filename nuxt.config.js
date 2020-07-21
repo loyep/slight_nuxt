@@ -1,5 +1,5 @@
 /**
- * Nuxt configuration.
+ * Nuxt configuration
  */
 const config = {
   /*

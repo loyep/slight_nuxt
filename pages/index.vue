@@ -35,7 +35,7 @@ function getMockData() {
     setTimeout(() => {
       const title = '测试title'
       resolve(title)
-    }, 50)
+    }, 500)
   })
 }
 
