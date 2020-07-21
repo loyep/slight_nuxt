@@ -1,4 +1,4 @@
-export default {
+const config = {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -20,8 +20,6 @@ export default {
     nuxt: (globalName) => `$${globalName}`,
     context: (globalName) => `__${globalName.toUpperCase()}__`,
     pluginPrefix: (globalName) => globalName,
-    // readyCallback: globalName => `on${_.capitalize(globalName)}Ready`,
-    // loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
   },
   /*
    ** Headers of the page
@@ -68,7 +66,7 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     // 'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
   ],
   /*
    ** Axios module configuration
@@ -79,8 +77,13 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    analyze: true,
+    publicPath: '/static/',
+  },
   render: {
     compressor: false,
   },
 }
+
+export default config
