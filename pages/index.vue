@@ -6,13 +6,10 @@
         sligo
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
+        <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
+          <a-button>
+            Documentation
+          </a-button>
         </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
@@ -29,6 +26,7 @@
 
 <script lang="ts">
 import { defineComponent, onUnmounted, onMounted } from '@vue/composition-api'
+import { Button } from 'ant-design-vue'
 
 function getMockData() {
   return new Promise((resolve) => {
@@ -40,6 +38,9 @@ function getMockData() {
 }
 
 export default defineComponent({
+  components: {
+    AButton: Button,
+  },
   async asyncData() {
     const title = await getMockData()
     return { title }

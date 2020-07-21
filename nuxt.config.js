@@ -44,12 +44,12 @@ const config = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [{ src: 'ant-design-vue/dist/antd.less', lang: 'less' }],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '@/plugins/index.js', ssr: true }],
+  plugins: [{ src: '@/plugins/index.ts', ssr: true }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -84,27 +84,62 @@ const config = {
     extractCSS: true,
     analyze: true,
     publicPath: '/static/',
-    optimization: {
-      splitChunks: {
-        chunks: 'async',
-        minSize: 30000,
-        maxSize: 0,
-        minChunks: 1,
-        maxAsyncRequests: 5,
-        maxInitialRequests: 3,
-        automaticNameDelimiter: '~',
-        automaticNameMaxLength: 30,
-        name: true,
-        cacheGroups: {
-          vendors: {
-            test: /[\\/]node_modules[\\/]/,
-            priority: -10,
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'async',
+    //     minSize: 30000,
+    //     maxSize: 0,
+    //     minChunks: 1,
+    //     maxAsyncRequests: 5,
+    //     maxInitialRequests: 3,
+    //     automaticNameDelimiter: '~',
+    //     automaticNameMaxLength: 30,
+    //     name: true,
+    //     cacheGroups: {
+    //       vendors: {
+    //         test: /[\\/]node_modules[\\/]/,
+    //         priority: -10,
+    //       },
+    //       default: {
+    //         minChunks: 2,
+    //         priority: -20,
+    //         reuseExistingChunk: true,
+    //       },
+    //     },
+    //   },
+    // },
+    babel: {
+      plugins: [
+        [
+          'import',
+          {
+            libraryName: 'ant-design-vue',
+            // libraryDirectory: 'es'
+            // style: true
           },
-          default: {
-            minChunks: 2,
-            priority: -20,
-            reuseExistingChunk: true,
+          'ant-design-vue',
+        ],
+      ],
+    },
+    loaders: {
+      less: {
+        lessOptions: {
+          modifyVars: {
+            // 'primary-color': '#00cccc', // 全局主色
+            // 'link-color': '#00cccc', // 链接色
+            'success-color': '#52c41a', // 成功色
+            'warning-color': '#faad14', // 警告色
+            'error-color': '#f5222d', // 错误色
+            'font-size-base': '14px', // 主字号
+            'heading-color': 'rgba(0, 0, 0, .85)', // 标题色
+            'text-color': 'rgba(0, 0, 0, .65)', // 主文本色
+            'text-color-secondary': 'rgba(0, 0, 0, .45)', // 次文本色
+            'disabled-color': 'rgba(0, 0, 0, .25)', // 失效色
+            'border-radius-base': '4px', // 组件/浮层圆角
+            'border-color-base': '#d9d9d9', // 边框色
+            'box-shadow-base': '0 2px 8px rgba(0, 0, 0, .15)', // 浮层阴影
           },
+          javascriptEnabled: true,
         },
       },
     },
