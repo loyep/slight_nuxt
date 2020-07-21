@@ -30,7 +30,20 @@
 <script lang="ts">
 import { defineComponent, onUnmounted, onMounted } from '@vue/composition-api'
 
+function getMockData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const title = '测试title'
+      resolve(title)
+    }, 50)
+  })
+}
+
 export default defineComponent({
+  async asyncData() {
+    const title = await getMockData()
+    return { title }
+  },
   setup() {
     onMounted(function () {
       console.log('ggggg')

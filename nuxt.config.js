@@ -1,3 +1,6 @@
+/**
+ * Nuxt configuration.
+ */
 const config = {
   /*
    ** Nuxt rendering mode
