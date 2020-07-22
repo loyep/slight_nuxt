@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 /**
  * Nuxt configuration
  */
@@ -13,7 +15,7 @@ const config = {
    */
   target: 'server',
   loading: false,
-  loadingindicator: false,
+  loadingIndicator: false,
   /**
    * 定义公共的配置
    */
@@ -81,52 +83,41 @@ const config = {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
+    transpile: ['ant-design-vue'],
     extractCSS: true,
-    analyze: true,
+    analyze: false,
     publicPath: '/static/',
-    // optimization: {
-    //   splitChunks: {
-    //     chunks: 'async',
-    //     minSize: 30000,
-    //     maxSize: 0,
-    //     minChunks: 1,
-    //     maxAsyncRequests: 5,
-    //     maxInitialRequests: 3,
-    //     automaticNameDelimiter: '~',
-    //     automaticNameMaxLength: 30,
-    //     name: true,
-    //     cacheGroups: {
-    //       vendors: {
-    //         test: /[\\/]node_modules[\\/]/,
-    //         priority: -10,
-    //       },
-    //       default: {
-    //         minChunks: 2,
-    //         priority: -20,
-    //         reuseExistingChunk: true,
-    //       },
-    //     },
-    //   },
-    // },
-    babel: {
-      plugins: [
-        [
-          'import',
-          {
-            libraryName: 'ant-design-vue',
-            // libraryDirectory: 'es'
-            // style: true
+    optimization: {
+      splitChunks: {
+        chunks: 'async',
+        minSize: 30000,
+        maxSize: 0,
+        minChunks: 1,
+        maxAsyncRequests: 5,
+        maxInitialRequests: 3,
+        automaticNameDelimiter: '~',
+        automaticNameMaxLength: 30,
+        name: true,
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
           },
-          'ant-design-vue',
-        ],
-      ],
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+        },
+      },
     },
+    babel: {},
     loaders: {
       less: {
         lessOptions: {
           modifyVars: {
-            // 'primary-color': '#00cccc', // 全局主色
-            // 'link-color': '#00cccc', // 链接色
+            'primary-color': '#00cccc', // 全局主色
+            'link-color': '#00cccc', // 链接色
             'success-color': '#52c41a', // 成功色
             'warning-color': '#faad14', // 警告色
             'error-color': '#f5222d', // 错误色
@@ -143,6 +134,10 @@ const config = {
         },
       },
     },
+    plugins: [
+      // Ignore all locale files of moment.js
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    ],
   },
   render: {
     compressor: false,

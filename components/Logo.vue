@@ -21,7 +21,7 @@
   </svg>
 </template>
 
-<style lang="scss">
+<style lang="less">
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;

@@ -7,7 +7,7 @@
       </h1>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
-          <a-button>
+          <a-button type="primary">
             Documentation
           </a-button>
         </a>
@@ -58,7 +58,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style lang="less">
 .container {
   margin: 0 auto;
   min-height: 100vh;
