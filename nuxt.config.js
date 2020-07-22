@@ -65,6 +65,9 @@ const config = {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
   ],
+  styleResources: {
+    less: ['./assets/styles/variable.less'],
+  },
   /*
    ** Nuxt.js modules
    */
@@ -72,6 +75,7 @@ const config = {
     // Doc: https://bootstrap-vue.js.org
     // 'bootstrap-vue/nuxt',
     // '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
   ],
   /*
    ** Axios module configuration
