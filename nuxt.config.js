@@ -1,3 +1,4 @@
+const path = require('path')
 const webpack = require('webpack')
 
 /**
@@ -46,7 +47,7 @@ const config = {
   /*
    ** Global CSS
    */
-  css: [{ src: 'ant-design-vue/dist/antd.less', lang: 'less' }],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -66,7 +67,7 @@ const config = {
     '@nuxtjs/stylelint-module',
   ],
   styleResources: {
-    less: ['./assets/styles/variable.less'],
+    less: ['./assets/styles/variable.less', './assets/styles/styles.less'],
   },
   /*
    ** Nuxt.js modules
@@ -142,6 +143,9 @@ const config = {
       // Ignore all locale files of moment.js
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     ],
+    extend(config, ctx) {
+      config.resolve.alias['@assets'] = path.join(__dirname, './assets')
+    },
   },
   render: {
     compressor: false,

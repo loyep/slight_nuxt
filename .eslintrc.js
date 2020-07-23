@@ -15,5 +15,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     'no-console': 'off',
+    'no-descending-specificity': 'off',
+    'comment-whitespace-inside': 'off',
   },
 }
