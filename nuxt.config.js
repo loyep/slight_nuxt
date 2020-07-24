@@ -1,3 +1,4 @@
+// import { Configuration } from '@nuxt/types'
 const path = require('path')
 const webpack = require('webpack')
 
@@ -47,7 +48,11 @@ const config = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/styles/variable.scss',
+    '@/assets/styles/variable.less',
+    // '@/assets/styles/styles.less',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -67,7 +72,11 @@ const config = {
     '@nuxtjs/stylelint-module',
   ],
   styleResources: {
-    less: ['./assets/styles/variable.less', './assets/styles/styles.less'],
+    less: [
+      // '@/assets/styles/variable.less',
+      //  '@/assets/styles/styles.less'
+    ],
+    // sass: ['@/assets/styles/variable.scss'],
   },
   /*
    ** Nuxt.js modules
@@ -101,7 +110,6 @@ const config = {
         maxAsyncRequests: 5,
         maxInitialRequests: 3,
         automaticNameDelimiter: '~',
-        automaticNameMaxLength: 30,
         name: true,
         cacheGroups: {
           vendors: {
@@ -119,6 +127,7 @@ const config = {
     babel: {},
     loaders: {
       less: {
+        // @ts-ignore
         lessOptions: {
           modifyVars: {
             'primary-color': '#00cccc', // 全局主色
@@ -143,7 +152,7 @@ const config = {
       // Ignore all locale files of moment.js
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     ],
-    extend(config, ctx) {
+    extend(config) {
       config.resolve.alias['@assets'] = path.join(__dirname, './assets')
     },
   },

@@ -5,18 +5,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
 import { Context } from '@nuxt/types'
+import { Component, Vue } from 'vue-property-decorator'
 
-export default defineComponent({
-  name: 'Post',
-  asyncData({ redirect, params }: Context) {
+@Component({
+  asyncData({ params, redirect }: Context) {
     if (!params.slug) {
       redirect('/404')
     }
   },
-  setup() {
-    return {}
-  },
 })
+export default class Page extends Vue {}
 </script>

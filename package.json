@@ -36,12 +36,14 @@
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
+    "@nuxt/types": "^2.13.3",
     "@nuxt/typescript-build": "^1.0.3",
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-config-typescript": "^2.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
+    "@types/less": "^3.0.1",
     "@vue/test-utils": "^1.0.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -57,10 +59,15 @@
     "less-loader": "^6.2.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.1.0",
-    "vue-jest": "^3.0.4"
+    "vue-class-component": "^7.2.5",
+    "vue-jest": "^3.0.4",
+    "vue-property-decorator": "^9.0.0",
+    "vuex-module-decorators": "^0.17.0"
   }
 }

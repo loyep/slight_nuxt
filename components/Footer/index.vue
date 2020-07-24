@@ -1,75 +1,101 @@
 <template>
-  <footer class="footer bg-dark">
+  <footer class="footer bg-dark py-3 py-lg-4">
     <div class="container">
-      <div class="row py-3 py-lg-4">
-        <div class="col-lg-6 pr-lg-5 py-3">
-          <div class="footer-widget pr-lg-5">
-            <div class="footer-widget-header mb-2 mb-md-3">
-              <span>有格调——想给你看没发出光的金子</span>
-            </div>
-            <div class="footer-widget-content">
-              <p>
-                对于优质作品的创作，没什么比倾注心血却没有回响更让作者难过的了。有格调希望能使得这些尚未发光的金子能提早被一部分相当具有审美能力的受众知晓，也希望给不满足于主流榜单的受众提供一个推荐内容的平台。
-              </p>
-            </div>
-            <div class="footer-widget-social mx-n2 mt-3"></div>
+      <div class="d-lg-flex flex-md-fill align-items-lg-center">
+        <div class="d-lg-flex flex-lg-column mr-lg-4">
+          <div class="footer-menu">
+            <ul>
+              <li
+                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1763"
+              >
+                <a href="https://www.suxing.me/" aria-current="page">首页</a>
+              </li>
+              <li
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1506"
+              >
+                <a
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://www.nicetheme.cn"
+                  ><i
+                    class="text-xl iconfont icon-socialwordpressoutline mr-1"
+                  ></i
+                  >主题</a
+                >
+              </li>
+              <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1567"
+              >
+                <a href="https://www.suxing.me/category/wp-courses">教程</a>
+              </li>
+              <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1568"
+              >
+                <a href="https://www.suxing.me/category/blog">博客</a>
+              </li>
+              <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-649"
+              >
+                <a href="https://www.suxing.me/category/news">唠叨</a>
+              </li>
+              <li
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1769"
+              >
+                <a href="https://www.suxing.me/links">基友团</a>
+              </li>
+              <li
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8"
+              >
+                <a href="https://www.suxing.me/liuyan">留言</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-copyright text-xs">
+            Copyright © 2012-2020
+            <a href="https://www.suxing.me" title="苏醒" rel="home">苏醒</a>.
+            Designed by
+            <a
+              href="https://www.nicetheme.cn"
+              title="nicetheme奈思主题-资深的原创WordPress主题开发团队"
+              target="_blank"
+              >nicetheme</a
+            >.
           </div>
         </div>
-        <div class="col-lg-3 py-3">
-          <div class="footer-widget">
-            <div class="footer-widget-header mb-2 mb-md-3">
-              <span>特色专题</span>
-            </div>
-            <div class="footer-widget-content">
-              <div class="footer-widget-links">
-                <a href="https://www.ugediao.com/category/reading">文字</a>
-                <a href="https://www.ugediao.com/category/music">音乐</a>
-                <a href="https://www.ugediao.com/category/games">游戏</a>
-                <a href="https://www.ugediao.com/category/videos">视频</a>
-                <a href="https://www.ugediao.com/category/software">软件</a>
-                <a href="https://www.ugediao.com/category/radio">电台</a>
-                <a href="https://www.ugediao.com/category/picture">图片</a>
-                <a href="https://www.ugediao.com/zhuantituijian">专题推荐</a>
-                <a href="https://www.ugediao.com/weibo">微博</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 py-3">
-          <div class="footer-widget">
-            <div class="footer-widget-header mb-2 mb-md-3">
-              <span>栏目分类</span>
-            </div>
-            <div class="footer-widget-content">
-              <div class="footer-widget-links m-n1">
-                <a href="https://www.ugediao.com/category/reading">文字</a>
-                <a href="https://www.ugediao.com/category/music">音乐</a>
-                <a href="https://www.ugediao.com/category/games">游戏</a>
-                <a href="https://www.ugediao.com/category/videos">视频</a>
-                <a href="https://www.ugediao.com/category/software">软件</a>
-                <a href="https://www.ugediao.com/category/radio">电台</a>
-                <a href="https://www.ugediao.com/category/picture">图片</a>
-                <a href="https://www.ugediao.com/zhuantituijian">专题推荐</a>
-                <a href="https://www.ugediao.com/weibo">微博</a>
-              </div>
-            </div>
-          </div>
+        <div class="flex-lg-fill"></div>
+        <div class="mt-3 mt-lg-0 mx-n1 flex-shrink-0">
+          <span class="d-inline-block p-1"
+            ><a
+              href="javascript:"
+              data-img="//res.suxing.me.nicetheme.xyz/wp-content/uploads/2019/12/2019121616515042.jpg"
+              data-title="nicetheme官方公众号"
+              data-desc="扫码加入，购主题有福利"
+              class="single-popup btn btn-secondary btn-weixin btn-icon"
+            >
+              <span><i class="text-lg iconfont icon-wechat-fill"></i></span> </a
+          ></span>
         </div>
       </div>
-    </div>
-    <div
-      class="footer-copyright text-xs border-top border-secondary py-3 py-md-4"
-    >
-      <div class="container">
-        Copyright © 2020
-        <a href="https://www.ugediao.com" title="有格调" rel="home">有格调</a>.
-        <a
-          href="http://beian.miit.gov.cn/"
-          target="_blank"
-          rel="nofollow"
-          class="d-none d-lg-inline-block"
-          >苏ICP备14007214号-2</a
+      <div class="footer-links border-top border-secondary pt-3 mt-3 text-xs">
+        <span>友情链接: </span>
+        <a href="http://www.mywpku.com/" target="_blank">WP酷</a>
+        <a href="https://salongweb.com" target="_blank">萨龙网络</a>
+        <a href="http://www.2zzt.com" target="_blank">WordPress主题</a>
+        <a href="https://www.mpyit.com/" target="_blank">殁漂遥</a>
+        <a href="https://www.wpcom.cn" target="_blank">WordPress主题</a>
+        <a href="https://www.suxing.me/" target="_blank">WordPress</a>
+        <a href="https://www.themepark.com.cn" target="_blank"
+          >WordPress主题公园</a
         >
+        <a href="http://www.uazoh.com/" target="_blank">Uazoh优佐生活</a>
+        <a href="https://www.ugediao.com" target="_blank">有格调</a>
+        <a href="https://gordonsky.cn" target="_blank">Gordon</a>
+        <a href="https://www.xintheme.com" target="_blank">wordpress主题</a>
+        <a href="https://zhan.leiue.com" target="">泪雪建站</a>
+        <a href="https://www.dedesos.com/" target="_blank">织梦模板</a>
+        <a href="https://www.zhutihome.net/" target="_blank">主题之家</a>
+        <a href="https://www.bldhw.com" target="_blank">菠萝导航网</a>
+        <a href="https://www.nicetheme.cn/" target="_blank">wordpress主题</a>
       </div>
     </div>
   </footer>

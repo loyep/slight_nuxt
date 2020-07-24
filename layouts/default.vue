@@ -1,19 +1,21 @@
 <template>
   <div>
-    <Header></Header>
+    <SHeader></SHeader>
     <Nuxt />
-    <Footer></Footer>
+    <SFooter></SFooter>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import Header from '@/components/Header/index.vue'
+import Footer from '@/components/Footer/index.vue'
 
 export default defineComponent({
   name: 'DefaultLayout',
   components: {
-    Header,
+    SHeader: Header,
+    SFooter: Footer,
   },
 })
 </script>
