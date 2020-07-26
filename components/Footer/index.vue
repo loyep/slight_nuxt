@@ -64,16 +64,17 @@
         </div>
         <div class="flex-lg-fill"></div>
         <div class="mt-3 mt-lg-0 mx-n1 flex-shrink-0">
-          <span class="d-inline-block p-1"
-            ><a
+          <span class="d-inline-block p-1">
+            <a
               href="javascript:"
               data-img="//res.suxing.me.nicetheme.xyz/wp-content/uploads/2019/12/2019121616515042.jpg"
               data-title="nicetheme官方公众号"
               data-desc="扫码加入，购主题有福利"
               class="single-popup btn btn-secondary btn-weixin btn-icon"
             >
-              <span><i class="text-lg iconfont icon-wechat-fill"></i></span> </a
-          ></span>
+              <span><i class="text-lg iconfont icon-wechat-fill"></i></span>
+            </a>
+          </span>
         </div>
       </div>
       <div class="footer-links border-top border-secondary pt-3 mt-3 text-xs">
@@ -98,13 +99,20 @@
         <a href="https://www.nicetheme.cn/" target="_blank">wordpress主题</a>
       </div>
     </div>
+    <a-back-top :style="{ right: '28px' }">
+      <a-button type="info" icon="arrow-up" size="large"></a-button>
+    </a-back-top>
   </footer>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { BackTop } from 'ant-design-vue'
+import { Component, Vue } from 'vue-property-decorator'
 
-export default defineComponent({
-  name: 'Footer',
+@Component({
+  components: {
+    ABackTop: BackTop,
+  },
 })
+export default class Footer extends Vue {}
 </script>

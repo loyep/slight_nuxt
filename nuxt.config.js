@@ -1,4 +1,3 @@
-// import { Configuration } from '@nuxt/types'
 const path = require('path')
 const webpack = require('webpack')
 
@@ -71,13 +70,6 @@ const config = {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
   ],
-  styleResources: {
-    less: [
-      // '@/assets/styles/variable.less',
-      //  '@/assets/styles/styles.less'
-    ],
-    // sass: ['@/assets/styles/variable.scss'],
-  },
   /*
    ** Nuxt.js modules
    */
@@ -85,7 +77,7 @@ const config = {
     // Doc: https://bootstrap-vue.js.org
     // 'bootstrap-vue/nuxt',
     // '@nuxtjs/pwa',
-    '@nuxtjs/style-resources',
+    // '@nuxtjs/style-resources',
   ],
   /*
    ** Axios module configuration
@@ -130,8 +122,8 @@ const config = {
         // @ts-ignore
         lessOptions: {
           modifyVars: {
-            'primary-color': '#00cccc', // 全局主色
-            'link-color': '#00cccc', // 链接色
+            'primary-color': '#1890ff', // 全局主色
+            'link-color': '#1890ff', // 链接色
             'success-color': '#52c41a', // 成功色
             'warning-color': '#faad14', // 警告色
             'error-color': '#f5222d', // 错误色
